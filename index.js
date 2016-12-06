@@ -26,7 +26,7 @@ module.exports = function(content, sourceMap) {
 			imports.push("(function() {");
 			postfixes.unshift("}.call(" + value + "));");
 		} else {
-			imports.push("var " + name + " = " + value + ";");
+			imports.push(name + " = " + value + ";");
 		}
 	});
 	var prefix = HEADER + imports.join("\n") + "\n\n";
